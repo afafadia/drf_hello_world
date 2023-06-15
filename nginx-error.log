@@ -1,0 +1,1 @@
+2023/06/15 16:44:35 [error] 30019#30019: *3 upstream prematurely closed connection while reading response header from upstream, client: 192.168.1.51, server: 192.168.1.51, request: "GET / HTTP/1.1", upstream: "uwsgi://unix://run/gunicorn.sock:", host: "192.168.1.51"

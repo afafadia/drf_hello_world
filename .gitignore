@@ -1,5 +1,6 @@
 .vscode/
 venv/
+static/
 __pycache__/
 migrations/
 *.sqlite3
