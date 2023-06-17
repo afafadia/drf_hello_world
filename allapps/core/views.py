@@ -6,4 +6,6 @@ from rest_framework.views import APIView
 # Create your views here.
 class HomeView(APIView):
     def get(self, request):
-        return Response({"message": "Hello from Fafadia Tech!"}, status=status.HTTP_200_OK)
+        return Response(
+            {"message": "Hello from Fafadia Tech!"}, status=status.HTTP_200_OK
+        )
