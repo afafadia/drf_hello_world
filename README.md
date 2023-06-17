@@ -30,11 +30,12 @@
 8. Check status of nginx: `sudo systemctl status nginx`
 9. In `drf_hello_world/settings.py` file configure ALLOWED_HOSTS to allow your machine's IP address
 10. Test whether gunicorn is serving django rest framework application (http://<your_machine_ip_address>) by the following command:
-    `gunicorn --workers 2 --bind 0.0.0.0:8000 drf_hello_world.wsgi:application`
+    `gunicorn --workers 5 --bind 0.0.0.0:8000 drf_hello_world.wsgi:application`
 
 ### Supervisor config
 
-1. Run command: `mkdir ./etc && touch ./etc/supervisord.conf` and copy/paste the file contents from `./config/supervisord.conf` to this file
-2. Run command `supervisord`
-3. In your browser, navigate to "http://<your_machine_ip_address>" - the browser will render the page corresponding to the view
-4. Do some changes in code and then run command `supervisorctl restart all` and again refresh the browser - the browser will render the updated code
+1. Run command: `mkdir ./etc && touch ./etc/supervisord.conf && chmod +x ./etc/supervisord.conf` and copy/paste the file contents from `./config/supervisord.conf` to this file
+2. Run command: `touch ./etc/guni.sh && chmod +x ./etc/guni.sh` and copy/paste the file contents from `./config/guni.sh` to this file
+3. Run command: `supervisord`
+4. In your browser, navigate to "http://<your_machine_ip_address>" - the browser will render the page corresponding to the view
+5. Do some changes in code and then run command `supervisorctl restart all` and again refresh the browser - the browser will render the updated code
