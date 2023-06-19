@@ -15,7 +15,7 @@
 
 ### Gunicorn
 
-1. Test whether gunicorn is serving django rest framework application (http://localhost:8000) by the following command:
+1. Test whether gunicorn is serving django rest framework application (http://localhost:8001) by the following command:
    `gunicorn --workers 5 --bind 0.0.0.0:8001 drf_hello_world.wsgi:application`
 
 ### Nginx config
