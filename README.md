@@ -16,7 +16,7 @@
 ### Gunicorn
 
 1. Test whether gunicorn is serving django rest framework application (http://localhost:8000) by the following command:
-   `gunicorn --workers 5 --bind 0.0.0.0:8000 drf_hello_world.wsgi:application`
+   `gunicorn --workers 5 --bind 0.0.0.0:8001 drf_hello_world.wsgi:application`
 
 ### Nginx config
 
@@ -30,7 +30,7 @@
 8. Check status of nginx: `sudo systemctl status nginx`
 9. In `drf_hello_world/settings.py` file configure ALLOWED_HOSTS to allow your machine's IP address
 10. Test whether gunicorn is serving django rest framework application (http://<your_machine_ip_address>) by the following command:
-    `gunicorn --workers 5 --bind 0.0.0.0:8000 drf_hello_world.wsgi:application`
+    `gunicorn --workers 5 --bind 0.0.0.0:8001 drf_hello_world.wsgi:application`
 
 ### Supervisor config
 
